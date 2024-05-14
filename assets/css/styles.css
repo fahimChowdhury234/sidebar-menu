@@ -176,16 +176,14 @@ a {
 /* right side */
 .right-side {
   background-color: #f7f7f7;
-  padding: 20px;
-  padding-bottom: 0;
+  padding: 4px 15px;
   transition: all .3s ease-in;
   display: flex;
   gap: 20px;
+  height: 60px;
 }
 
-.right-side:hover {
-  padding-bottom: 20px;
-}
+
 
 .ul-wrapper {
   flex-shrink: 0;
@@ -199,17 +197,14 @@ a {
 .right-side ul {
   display: flex;
   align-items: center;
-  gap: 10px;
   flex-wrap: wrap;
 
 }
 
 .right-side ul li {
   width: 24%;
-  padding: 5px 10px;
-  background-color: #B6CEFC;
+
   border-radius: 6px;
-  margin-bottom: 10px;
 }
 
 .right-side ul li a {
@@ -242,36 +237,15 @@ a {
 }
 
 .visible-ul li {
-  height: 0;
-  padding: 0;
-  opacity: 0;
-  visibility: hidden;
-  padding: 0 !important;
-  margin: 0 !important;
+
   transition: all 0.3s ease-in;
 
 
 }
 
-.visible-ul li:nth-child(-n+8) {
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-  padding: 5px 10px !important;
 
-  /* Display the first 8 items */
-}
 
-.visible-ul:hover li {
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-  padding: 5px 10px !important;
-
-  /* Show all items when hovering over the list */
-}
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 500px) and (min-width: 300px) {
   .visible-ul li:nth-child(n+5) {
     height: 0;
     padding: 0;
@@ -285,12 +259,13 @@ a {
     visibility: visible;
     height: auto;
   }
-}
 
-
-@media only screen and (max-width: 768px) and (min-width: 300px) {
   .right-side {
     padding-bottom: 10px;
+  }
+
+  .right-side:hover {
+    height: auto;
   }
 
   .right-side ul li {
@@ -303,7 +278,6 @@ a {
   }
 
   .right-side ul {
-    height: 80px;
     transition: all .4s ease-in;
   }
 
@@ -314,6 +288,10 @@ a {
   .l-navbar {
     position: fixed;
     left: -121px;
+  }
+
+  .right-side ul li a {
+    font-size: 12px;
   }
 
   .expander {
@@ -331,6 +309,7 @@ a {
 
   #navbar2 {
     display: block;
+    padding-top: 14px;
   }
 
 }
