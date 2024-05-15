@@ -53,7 +53,7 @@ a {
 
 /*===== l NAV =====*/
 .l-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: var(--nav-width);
@@ -62,6 +62,7 @@ a {
   color: var(--white-color);
   padding: 1.5rem 1.5rem 2rem;
   transition: .5s;
+  z-index: 111;
   /* z-index: var(--z-fixed); */
 }
 
@@ -181,8 +182,16 @@ a {
   display: flex;
   gap: 20px;
   height: 60px;
+  position: fixed;
+  top: 0;
+  left: 93px;
+  width: 100%;
 }
 
+.content-area {
+  padding: 70px 25px;
+  transition: all .3s ease-in;
+}
 
 
 .ul-wrapper {
@@ -281,6 +290,7 @@ a {
 
   .right-side {
     padding-bottom: 10px;
+    left: 0;
   }
 
   .right-side:hover {
@@ -304,9 +314,14 @@ a {
     height: auto;
   }
 
+  .right-side:hover+.content-area {
+    padding-top: 130px;
+  }
+
   .l-navbar {
     position: fixed;
     left: -121px;
+    z-index: 111;
   }
 
   .right-side ul li a {
